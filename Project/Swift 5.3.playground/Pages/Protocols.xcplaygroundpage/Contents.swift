@@ -105,3 +105,20 @@ lightSwitch.toggle()
 print(lightSwitch)
 
 
+
+//Initializer Requirements
+
+protocol RequireInitProtocol {
+    init(number: Int)
+}
+
+class RequireInit: RequireInitProtocol {
+    var number: Int
+    
+    required init(number: Int) {
+        self.number = number
+    }
+}
+
+
+

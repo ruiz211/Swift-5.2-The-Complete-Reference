@@ -64,3 +64,14 @@ print(person.fullname)
 
 
 
+//Method Requirements
+
+protocol StaticProtocol {
+    static func message(message: String) -> String
+}
+
+class Message: StaticProtocol {
+    static func message(message: String) -> String {
+        return "The message is: \(message)"
+    }
+}

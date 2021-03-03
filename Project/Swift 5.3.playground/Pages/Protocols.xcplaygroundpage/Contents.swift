@@ -157,3 +157,45 @@ print(roll.roll())
 
 
 
+//Delegation
+
+class First: Call {
+    func call() {
+        print("First claa again")
+    }
+    
+    init() {
+        print("Fisrt class...")
+    }
+    
+    func callSecond() -> Void {
+        let second: Second = Second()
+        second.call = self
+        second.callFirst()
+    }
+}
+
+protocol Call{
+    func call() -> Void
+}
+
+class Second {
+    
+    var call: Call?
+    
+    init() {
+        print("Second class...")
+    }
+    
+    func callFirst() -> Void {
+        sleep(5)
+        call?.call()
+    }
+}
+
+
+let f: First = First()
+f.callSecond()
+
+
+

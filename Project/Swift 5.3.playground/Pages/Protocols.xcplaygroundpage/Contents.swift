@@ -81,7 +81,7 @@ class Message: StaticProtocol {
 //Mutating Method Requirements
 
 protocol Togglable {
-     mutating func toggle()
+    mutating func toggle()
 }
 
 enum OnOff: Togglable {
@@ -197,5 +197,21 @@ class Second {
 let f: First = First()
 f.callSecond()
 
+
+
+//Adding Protocol Conformance with an Extension
+
+protocol MathFunctions {
+    func factorial(number: Int) -> Int
+    
+}
+
+extension Int: MathFunctions{
+    func factorial(number: Int) -> Int {
+        if number < 0 { return 0 }
+        else if number == 0 { return 1 }
+        return number * factorial(number: number - 1)
+    }
+}
 
 

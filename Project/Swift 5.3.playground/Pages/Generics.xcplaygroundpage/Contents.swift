@@ -42,3 +42,12 @@ for item in stackOfStrings.items {
 }
 
 
+
+//Extending a Generic Type
+
+extension Stack {
+    var topItem: T? {
+        return items.isEmpty ? nil : items[items.count - 1]
+    }
+}
+

@@ -75,3 +75,33 @@ class Message: StaticProtocol {
         return "The message is: \(message)"
     }
 }
+
+
+
+//Mutating Method Requirements
+
+protocol Togglable {
+     mutating func toggle()
+}
+
+enum OnOff: Togglable {
+    case On, Off
+    
+    mutating func toggle() {
+        switch self {
+        case .On:
+            self = .Off
+        case .Off:
+            self = .On
+        }
+    }
+}
+
+var lightSwitch: OnOff = OnOff.Off
+print(lightSwitch)
+lightSwitch.toggle()
+print(lightSwitch)
+lightSwitch.toggle()
+print(lightSwitch)
+
+

@@ -159,43 +159,41 @@ print(roll.roll())
 
 //Delegation
 
-class First: Call {
+protocol DelegateProtocol {
+    func call()
+}
+
+class First: DelegateProtocol {
     func call() {
-        print("First claa again")
+        print("Back to Fisrt")
     }
     
     init() {
-        print("Fisrt class...")
+        print("First")
     }
     
     func callSecond() -> Void {
         let second: Second = Second()
-        second.call = self
+        second.delegate = self
         second.callFirst()
     }
 }
 
-protocol Call{
-    func call() -> Void
-}
-
 class Second {
-    
-    var call: Call?
+    var delegate: DelegateProtocol?
     
     init() {
-        print("Second class...")
+        print("Second")
     }
     
     func callFirst() -> Void {
-        sleep(5)
-        call?.call()
+        sleep(2)
+        delegate?.call()
     }
 }
 
-
-let f: First = First()
-f.callSecond()
+let fisrt: First = First()
+fisrt.callSecond()
 
 
 
@@ -235,6 +233,7 @@ if twoThreeFour == anotherTwoThreeFour {
 protocol Named {
     var name: String { get }
 }
+
 protocol Aged {
     var age: Int { get }
 }
@@ -243,9 +242,14 @@ struct Birthday: Named, Aged {
     var name: String
     var age: Int
 }
+
 func wishHappyBirthday(to celebrator: Named & Aged) {
     print("Happy birthday, \(celebrator.name), you're \(celebrator.age)!")
 }
+
 let birthdayPerson = Birthday(name: "Malcolm", age: 21)
 wishHappyBirthday(to: birthdayPerson)
 
+
+
+//

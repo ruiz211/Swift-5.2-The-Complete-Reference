@@ -1,5 +1,8 @@
 import Foundation
 
+//Defining and Calling Functions
+
+//When you define a function, you can optionally define one or more named, typed values that the function takes as input, known as parameters. You can also optionally define a type of value that the function will pass back as output when it’s done, known as its return type.
 func greet(forName name: String) -> String {
     return "Hi \(name)"
 }

@@ -16,6 +16,7 @@ for item in anotherArray {
 
 //Sets
 
+//A set stores distinct values of the same type in a collection with no defined ordering. You can use a set instead of an array when the order of items isn’t important, or when you need to ensure that an item only appears once.
 let alphabet: Set<Character> = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 let vowels: Set<Character> = ["a", "e", "i", "o", "u"]
 print(alphabet.symmetricDifference(vowels).sorted(by: { (a, b) -> Bool in a < b }))
@@ -23,6 +24,7 @@ print(alphabet.symmetricDifference(vowels).sorted(by: { (a, b) -> Bool in a < b 
 
 
 //Performing Set Operations
+
 
 print(alphabet.intersection(vowels).sorted(by: { (a, b) -> Bool in a < b }))
 //print(alphabet.intersection(vowels).sorted(by: { $0 < $1 })) //Is the same

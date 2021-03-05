@@ -1,7 +1,8 @@
 import Foundation
 
-//For Loop
+//For-In Loop
 
+//You use the for-in loop to iterate over a sequence, such as items in an array, ranges of numbers, or characters in a string.
 let names = ["Anna", "Alex", "Brian", "Jack"]
 for name in names {
     print("Hello, \(name)!")

@@ -36,6 +36,15 @@ let names = user(userData: users)?.1
 print(names!)
 
 
+
+//Function Argument Labels and Parameter Names
+
+//Each function parameter has both an argument label and a parameter name. The argument label is used when calling the function; each argument is written in the function call with its argument label before it. The parameter name is used in the implementation of the function. By default, parameters use their parameter name as their argument label.
+
+
+//In-Out Parameters
+
+//Function parameters are constants by default. Trying to change the value of a function parameter from within the body of that function results in a compile-time error.
 func changeValues(_ a: inout Int, _ b: inout Int) -> Void {
     let c = a
     a = b
@@ -55,6 +64,7 @@ func stepForward(_ input: Int) -> Int {
 func stepBackward(_ input: Int) -> Int {
     return input - 1
 }
+
 
 func chooseStepFunction(backward: Bool) -> ((Int) -> Int) {
     return backward ? stepBackward : stepForward

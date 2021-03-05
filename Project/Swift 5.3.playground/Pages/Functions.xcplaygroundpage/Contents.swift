@@ -9,13 +9,18 @@ func greet(forName name: String) -> String {
 
 greet(forName: "String")
 
+
+
+//Function Parameters and Return Values
+
+//Function parameters and return values are extremely flexible in Swift. You can define anything from a simple utility function with a single unnamed parameter to a complex function with expressive parameter names and different parameter options.
 func user(userData data: [UUID: String]) -> ([UUID], [String])? {
     var ids: [UUID] = [UUID]()
     var names: [String] = [String]()
     for (id, name) in data {
         ids.append(id)
         names.append(name)
-//        print("id: \(id), name: \(name)")
+        print("id: \(id), name: \(name)")
     }
     return (ids, names)
 }

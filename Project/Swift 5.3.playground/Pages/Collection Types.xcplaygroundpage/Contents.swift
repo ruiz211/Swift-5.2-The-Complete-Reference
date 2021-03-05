@@ -26,7 +26,7 @@ print(alphabet.symmetricDifference(vowels).sorted(by: { (a, b) -> Bool in a < b 
 //Performing Set Operations
 
 print(alphabet.intersection(vowels).sorted(by: { (a, b) -> Bool in a < b }))
-//print(alphabet.intersection(vowels).sorted(by: { $0 < $1 })) //Is the same
+print(alphabet.intersection(vowels).sorted(by: { $0 < $1 })) //Is the same
 print(vowels.isSubset(of: alphabet))
 
 

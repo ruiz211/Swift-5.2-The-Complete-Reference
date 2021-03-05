@@ -25,7 +25,6 @@ print(alphabet.symmetricDifference(vowels).sorted(by: { (a, b) -> Bool in a < b 
 
 //Performing Set Operations
 
-
 print(alphabet.intersection(vowels).sorted(by: { (a, b) -> Bool in a < b }))
 //print(alphabet.intersection(vowels).sorted(by: { $0 < $1 })) //Is the same
 print(vowels.isSubset(of: alphabet))
@@ -34,6 +33,7 @@ print(vowels.isSubset(of: alphabet))
 
 //Dictionaries
 
+//A dictionary stores associations between keys of the same type and values of the same type in a collection with no defined ordering. Each value is associated with a unique key, which acts as an identifier for that value within the dictionary.
 var users: [UUID: String] = [UUID(): "John"]
 users[UUID()] = "Charles"
 for (id, name) in users {

@@ -2,6 +2,7 @@ import Foundation
 
 //Arrays
 
+//An array stores values of the same type in an ordered list. The same value can appear in an array multiple times at different positions.
 var someArray: [String] = [String]()
 var anotherArray: [String] = Array(repeating: " ", count: 3)
 anotherArray[1] = "Some string"

@@ -66,6 +66,9 @@ func stepBackward(_ input: Int) -> Int {
 }
 
 
+//Function Types
+
+//Every function has a specific function type, made up of the parameter types and the return type of the function.
 func chooseStepFunction(backward: Bool) -> ((Int) -> Int) {
     return backward ? stepBackward : stepForward
 }

@@ -30,8 +30,6 @@ func evaluate(forEvaluate expression: ArithmeticExpression) -> Int {
         return evaluate(forEvaluate: left) + evaluate(forEvaluate: right)
     case let .multiplication(left, right):
         return evaluate(forEvaluate: left) * evaluate(forEvaluate: right)
-    default:
-        return 0
     }
 }
 

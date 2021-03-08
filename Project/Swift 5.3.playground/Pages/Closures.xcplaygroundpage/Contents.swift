@@ -6,7 +6,9 @@ import Foundation
 //Closure Expressions
 
 //Nested functions, as introduced in Nested Functions, are a convenient means of naming and defining self-contained blocks of code as part of a larger function.
-var names: [String] = ["Charles", "Eric", "Hank", "Eve"]
+var names: [String] = ["Charles", "Eric", "Hank", "Eve"].sorted { (s1, s2) -> Bool in
+    s1 < s2
+}
 
 names.sorted { (a, b) -> Bool in
     a < b

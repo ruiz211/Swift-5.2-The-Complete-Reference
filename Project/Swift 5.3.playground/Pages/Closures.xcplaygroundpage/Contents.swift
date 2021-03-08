@@ -19,3 +19,11 @@ names.filter { (a) -> Bool in
 }
 
 
+
+//Trailing Closures
+
+//If you need to pass a closure expression to a function as the function’s final argument and the closure expression is long, it can be useful to write it as a trailing closure instead.
+
+
+
+

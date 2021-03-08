@@ -27,3 +27,21 @@ names.filter { (a) -> Bool in
 
 
 
+//Capturing Values
+
+//A closure can capture constants and variables from the surrounding context in which it’s defined.
+func increment(forIncrement amount: Int) -> (()-> Int) {
+    var total = 0
+    func add() -> Int {
+        total += amount
+        return total
+    }
+    return add
+}
+
+let incrementByTen = increment(forIncrement: 10)
+incrementByTen()
+incrementByTen()
+print(incrementByTen)
+
+

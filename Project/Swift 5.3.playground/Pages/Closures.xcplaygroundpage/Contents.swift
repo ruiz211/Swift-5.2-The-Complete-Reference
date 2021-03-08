@@ -45,3 +45,7 @@ incrementByTen()
 print(incrementByTen)
 
 
+
+//Escaping Closures
+
+//

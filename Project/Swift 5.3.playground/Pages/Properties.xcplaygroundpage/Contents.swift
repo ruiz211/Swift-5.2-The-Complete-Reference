@@ -97,8 +97,8 @@ var new: Int {
 
 @propertyWrapper
 struct SmallNumber {
-    private var number: Int
-    private var wrapper: Int
+    var number: Int
+    var wrapper: Int
     
     var wrappedValue: Int {
         get { return number }
@@ -107,7 +107,7 @@ struct SmallNumber {
     
     init() {
         self.wrapper = 11
-        self.number = 0
+        self.number = 2
     }
     
     //extra code
@@ -124,7 +124,7 @@ struct SmallNumber {
 
 struct SomeStruct {
     @SmallNumber(wrappedValue: 1000, wrapper: 999) var value: Int
-    @SmallNumber var newValue: Int
+    @SmallNumber var nValue: Int
 }
 
 var someValue: SomeStruct = SomeStruct()
@@ -132,6 +132,6 @@ print(someValue.value)
 someValue.value = 99
 print(someValue.value)
 
-print(someValue.newValue)
-someValue.newValue = 13
-print(someValue.newValue)
+print(someValue.nValue)
+someValue.nValue = 13
+print(someValue.nValue)
